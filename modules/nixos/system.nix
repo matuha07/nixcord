@@ -20,5 +20,7 @@
     "flakes"
   ];
 
+  hardware.bluetooth.enable = true;
+
   system.stateVersion = "25.11";
 }

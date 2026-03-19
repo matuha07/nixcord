@@ -3,6 +3,7 @@
   imports = [
     ../../modules/common
     ../../modules/nixos
+    ./hardware-configuration.nix
   ];
 
   networking.hostName = "enanan";

@@ -14,10 +14,6 @@
       "networkmanager"
     ];
     home = "/home/motya";
-    packages = with pkgs; [
-      tree
-      vim
-    ];
   };
 
   nixpkgs.config.allowUnfree = true;

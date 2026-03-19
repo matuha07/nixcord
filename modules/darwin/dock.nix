@@ -1,7 +1,7 @@
 {
   system.defaults.dock = {
-    autohide = true;
+    autohide = false;
     magnification = false;
     tilesize = 36;
-  }
+  };
 }

@@ -1,10 +1,10 @@
-{}:
+{ ... }:
 
 {
-   imports = [
+  imports = [
     ../../modules/common
     ../../modules/darwin
-   ];
+  ];
 
   networking.hostName = "amia";
 
@@ -12,5 +12,4 @@
     name = "motya";
     home = "/Users/motya";
   };
-
 }

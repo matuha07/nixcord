@@ -8,15 +8,27 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-  
   };
 
-    outputs = { self, nix-darwin, nixpkgs, ... }: {
-    darwinConfigurations."amia" =
-      nix-darwin.lib.darwinSystem {
+  outputs =
+    {
+      self,
+      nix-darwin,
+      nixpkgs,
+      ...
+    }:
+    {
+      darwinConfigurations."amia" = nix-darwin.lib.darwinSystem {
         modules = [
           ./hosts/amia
         ];
       };
-  };
+
+      nixosConfigurations."enanan" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/enanan
+        ];
+      };
+    };
 }

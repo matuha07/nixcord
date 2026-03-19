@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ...}:
+{ pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     bat
@@ -7,12 +7,16 @@
     fastfetch
     gh
     btop
-    pnpm 
+    pnpm
     nodejs
     ffmpeg
     ripgrep
     tmux
     wget
     tree
+    nixd
+    nil
+    vim
+    git
   ];
 }

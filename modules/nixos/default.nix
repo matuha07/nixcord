@@ -2,6 +2,9 @@
 {
   imports = [
     ./system.nix
-	./kde.nix
+    ./kde.nix
+    ./nix.nix
+    ./boot.nix
+    ./network.nix
   ];
 }

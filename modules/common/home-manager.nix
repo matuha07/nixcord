@@ -2,6 +2,7 @@
 {
   imports = [
     ./git.nix
+    ./jj.nix
   ];
 
   home.username = "motya";

@@ -18,5 +18,6 @@
     nil
     vim
     git
+    jujutsu
   ];
 }

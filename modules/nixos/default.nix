@@ -6,5 +6,8 @@
     ./nix.nix
     ./boot.nix
     ./network.nix
+    ./packages.nix
+    ./virtualization.nix
+    ./docker.nix
   ];
 }

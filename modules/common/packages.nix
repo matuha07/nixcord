@@ -19,5 +19,6 @@
     vim
     git
     jujutsu
+    opencode
   ];
 }

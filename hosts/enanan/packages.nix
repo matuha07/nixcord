@@ -7,6 +7,10 @@
     wine
     zed-editor
     vlc
+    cargo
+    rustc
+    godot
+    obs-studio
   ];
 
   programs.virt-manager.enable = true;

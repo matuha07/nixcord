@@ -1,24 +1,32 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    # cli-tools
     bat
-    go
+    ffmpeg
     curl
     fastfetch
-    gh
     btop
-    pnpm
-    nodejs
-    ffmpeg
     ripgrep
     tmux
     wget
     tree
-    nixd
-    nil
     vim
     git
     jujutsu
+    yazi
+    nmap
+    traceroute
+    fd
+
+    # code
+    pnpm
+    nodejs
+    go
+    gcc
+    gh
+    nixd
+    nil
     opencode
   ];
 }

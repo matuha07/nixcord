@@ -11,6 +11,7 @@
     rustc
     godot
     obs-studio
+    traceroute
   ];
 
   programs.virt-manager.enable = true;

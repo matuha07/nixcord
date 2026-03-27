@@ -16,8 +16,9 @@
     jujutsu
     yazi
     nmap
-    traceroute
     fd
+    zoxide
+    fzf
 
     # code
     pnpm

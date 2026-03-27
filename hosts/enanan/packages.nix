@@ -11,6 +11,7 @@
     rustc
     godot
     obs-studio
+    nicotine-plus
   ];
 
   programs.virt-manager.enable = true;

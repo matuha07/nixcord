@@ -12,6 +12,12 @@
     godot
     obs-studio
     nicotine-plus
+    protonvpn-gui
+    libreoffice-fresh
+    krita
+
+    xrdp
+    xsettingsd
   ];
 
   programs.virt-manager.enable = true;

@@ -23,15 +23,12 @@
       winetricks
       protontricks
       librewolf
+      nur.repos.lonerOrz.helium
     ];
     home = "/home/motya";
   };
 
-
   programs.steam.enable = true;
-
   services.flatpak.enable = true;
-
-
   nixpkgs.config.allowUnfree = true;
 }

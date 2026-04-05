@@ -15,6 +15,8 @@
     protonvpn-gui
     libreoffice-fresh
     krita
+    nerd-fonts.jetbrains-mono
+    localsend
 
     xrdp
     xsettingsd

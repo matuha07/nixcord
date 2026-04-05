@@ -8,6 +8,10 @@
     # home-manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    #nur
+    nur.url = "github:nix-community/NUR";
+    nur.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     {
@@ -15,6 +19,7 @@
       nix-darwin,
       nixpkgs,
       home-manager,
+      nur,
       ...
     }:
     {
@@ -40,6 +45,15 @@
             home-manager.useUserPackages = true;
             home-manager.users.motya = import ./modules/common/home-manager.nix;
           }
+          nur.modules.nixos.default
+          nur.repos.iopq.modules.nixos.xraya
+        ];
+      };
+
+      nixosConfigurations."kanade" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/kanade
         ];
       };
     };

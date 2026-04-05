@@ -9,6 +9,7 @@
     kdePackages.ksystemlog
     kdePackages.sddm-kcm
     kdePackages.kolourpaint
+    kdePackages.kdenlive
   ];
 
 }

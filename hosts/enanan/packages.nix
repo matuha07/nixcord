@@ -12,11 +12,17 @@
     godot
     obs-studio
     nicotine-plus
-    protonvpn-gui
+    proton-vpn
     libreoffice-fresh
     krita
     nerd-fonts.jetbrains-mono
     localsend
+    lutris
+    winetricks
+    protontricks
+    librewolf
+    nur.repos.lonerOrz.helium
+    vesktop
 
     xrdp
     xsettingsd

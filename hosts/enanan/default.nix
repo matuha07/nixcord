@@ -18,13 +18,6 @@
       "networkmanager"
     ];
 
-    packages = with pkgs; [
-      lutris
-      winetricks
-      protontricks
-      librewolf
-      nur.repos.lonerOrz.helium
-    ];
     home = "/home/motya";
   };
 

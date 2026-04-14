@@ -20,6 +20,7 @@
     zoxide
     fzf
     neovim
+    nushell
 
     # code
     pnpm

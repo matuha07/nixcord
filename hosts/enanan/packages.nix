@@ -2,7 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     telegram-desktop
-    kitty
+    ghostty
     qbittorrent
     wine
     zed-editor
@@ -17,12 +17,15 @@
     krita
     nerd-fonts.jetbrains-mono
     localsend
-    lutris
     winetricks
     protontricks
     librewolf
     nur.repos.lonerOrz.helium
     vesktop
+    tailscale
+    discord
+
+    gzdoom
 
     xrdp
     xsettingsd

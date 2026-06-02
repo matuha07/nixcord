@@ -30,6 +30,8 @@
     gh
     nixd
     nil
+    cargo
+    rustc
     opencode
   ];
 }

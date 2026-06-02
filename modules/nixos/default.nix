@@ -9,5 +9,6 @@
     ./packages.nix
     ./virtualization.nix
     ./docker.nix
+    ./kernel.nix
   ];
 }

@@ -1,13 +1,15 @@
 {
   description = "motya's nix configuration";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # home-manager
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     #nur
     nur.url = "github:nix-community/NUR";
@@ -46,7 +48,6 @@
             home-manager.users.motya = import ./modules/common/home-manager.nix;
           }
           nur.modules.nixos.default
-          nur.repos.iopq.modules.nixos.xraya
         ];
       };
 

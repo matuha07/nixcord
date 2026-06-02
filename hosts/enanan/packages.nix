@@ -12,7 +12,7 @@
     godot
     obs-studio
     nicotine-plus
-    proton-vpn
+    protonvpn-gui
     libreoffice-fresh
     krita
     nerd-fonts.jetbrains-mono
@@ -23,7 +23,9 @@
     nur.repos.lonerOrz.helium
     vesktop
     tailscale
-    discord
+    pgadmin4
+
+    lutris
 
     gzdoom
 

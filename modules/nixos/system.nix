@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   services.openssh.enable = true;
@@ -11,8 +11,6 @@
   };
 
   boot.kernelParams = [
-    "amdgpu.runpm=0"
-
     "pcie_aspm=off"
   ];
 

@@ -9,14 +9,13 @@
       modules = [
         "host"
         "os"
+        "cpu"
+        "gpu"
         "kernel"
         "uptime"
         "packages"
         "shell"
-        "resolution"
         "de"
-        "wm"
-        "theme"
         "terminal"
       ];
     };

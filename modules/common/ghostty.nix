@@ -5,11 +5,10 @@
 
     settings = {
       theme = "Catppuccin Mocha";
-      font-size = 11;
+      font-size = 10;
 
-      window-width = 240;
-      window-padding-x = 8;
-      window-padding-y = 8;
+      window-padding-x = 2;
+      window-padding-y = 2;
     };
   };
 }

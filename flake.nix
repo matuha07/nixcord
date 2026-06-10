@@ -1,19 +1,39 @@
 {
   description = "motya's nix configuration";
+
+  nixConfig = {
+    extra-substituters = [
+      "https://cache.garnix.io/"
+      "https://nix-community.cachix.org/"
+    ];
+    extra-trusted-public-keys = [
+      "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+
+    accept-flake-config = true;
+    builders-use-substitutes = true;
+
+    trusted-users = [
+      "root"
+      "@build"
+      "@wheel"
+      "@admin"
+    ];
+  };
+
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
+    helium.url = "github:amaanq/helium-flake";
+    helium.inputs.nixpkgs.follows = "nixpkgs";
+
     # home-manager
-    home-manager.url = "github:nix-community/home-manager/release-26.05";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-    #nur
-    nur.url = "github:nix-community/NUR";
-    nur.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     {
@@ -21,7 +41,7 @@
       nix-darwin,
       nixpkgs,
       home-manager,
-      nur,
+      helium,
       ...
     }:
     {
@@ -43,11 +63,15 @@
           ./hosts/enanan
           home-manager.nixosModules.home-manager
           {
+            environment.systemPackages = [
+              helium.packages.x86_64-linux.default
+            ];
+          }
+          {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.motya = import ./modules/common/home-manager.nix;
           }
-          nur.modules.nixos.default
         ];
       };
 

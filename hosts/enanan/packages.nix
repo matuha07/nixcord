@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+
   environment.systemPackages = with pkgs; [
     telegram-desktop
     ghostty
@@ -12,7 +13,7 @@
     godot
     obs-studio
     nicotine-plus
-    protonvpn-gui
+    proton-vpn
     libreoffice-fresh
     krita
     nerd-fonts.jetbrains-mono
@@ -20,11 +21,9 @@
     winetricks
     protontricks
     librewolf
-    nur.repos.lonerOrz.helium
     vesktop
     tailscale
     pgadmin4
-
     lutris
 
     gzdoom

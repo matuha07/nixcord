@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../../modules/common
@@ -18,7 +18,6 @@
       "networkmanager"
       "libvirtd"
     ];
-
     home = "/home/motya";
   };
 

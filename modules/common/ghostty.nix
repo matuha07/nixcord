@@ -1,7 +1,7 @@
 { pkgs, lib, ... }:
 {
   programs.ghostty = {
-    enable = true;
+    enable = !pkgs.stdenv.isDarwin;
 
     settings = {
       theme = "Catppuccin Mocha";

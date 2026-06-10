@@ -4,6 +4,8 @@
     ./git.nix
     ./jj.nix
     ./nushell.nix
+    ./fastfetch.nix
+    ./zoxide.nix
   ];
 
   home.username = "motya";

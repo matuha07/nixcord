@@ -2,7 +2,7 @@
   description = "motya's nix configuration";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # home-manager

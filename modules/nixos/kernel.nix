@@ -9,7 +9,6 @@
     "kernel.kptr_restrict" = 2;
     "kernel.dmesg_restrict" = 1;
     "fs.protected_fifos" = 2;
-
   };
 
   boot.blacklistedKernelModules = [

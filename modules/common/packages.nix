@@ -30,7 +30,7 @@
     gcc
     gh
     nixd
-    nil
+    nixfmt
     cargo
     rustc
     opencode

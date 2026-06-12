@@ -10,9 +10,8 @@
     pulse.enable = true;
   };
 
-  boot.kernelParams = [
-    "pcie_aspm=off"
-  ];
+  i18n.defaultLocale = "ru_RU.UTF-8";
+  i18n.extraLocales = [ "en_US.UTF-8/UTF-8" ];
 
   hardware.bluetooth.enable = true;
   system.stateVersion = "25.11";

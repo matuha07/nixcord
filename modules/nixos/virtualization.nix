@@ -1,5 +1,5 @@
 { ... }:
 {
   virtualisation.libvirtd.enable = true;
-  virtualisation.libvirtd.qemu.runAsRoot = false;
+  virtualisation.libvirtd.qemu.runAsRoot = true;
 }

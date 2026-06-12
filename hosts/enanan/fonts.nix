@@ -6,5 +6,6 @@
     noto-fonts-color-emoji
     liberation_ttf
     corefonts
+    nerd-fonts.jetbrains-mono
   ];
 }

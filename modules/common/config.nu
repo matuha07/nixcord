@@ -21,5 +21,3 @@ split row (char esep) |
 prepend /home/myuser/.apps |
 append /usr/bin/env
 )
-
-$env.PATH = ($env.PATH | append '/usr/local/share/dotnet')

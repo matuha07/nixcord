@@ -14,19 +14,18 @@
     obs-studio
     nicotine-plus
     proton-vpn
+
     libreoffice-fresh
+    onlyoffice-desktopeditors
+
     krita
-    nerd-fonts.jetbrains-mono
+
     localsend
     winetricks
     protontricks
-    librewolf
-    vesktop
-    tailscale
-    pgadmin4
     lutris
 
-    gzdoom
+    pgadmin4
 
     xrdp
     xsettingsd

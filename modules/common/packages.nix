@@ -10,7 +10,6 @@
     ripgrep
     tmux
     wget
-    tree
     vim
     (if pkgs.stdenv.isDarwin then pkgs.ghostty-bin else pkgs.ghostty)
     git
@@ -24,13 +23,12 @@
     nushell
 
     # code
+    deno
     pnpm
     nodejs
     go
     gcc
     gh
-    nixd
-    nixfmt
     cargo
     rustc
     opencode

@@ -9,6 +9,8 @@
   environment.systemPackages = [
     pkgs.nix-output-monitor
     pkgs.nh
+    pkgs.nixd
+    pkgs.nixfmt
   ];
 
 }

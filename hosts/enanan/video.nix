@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" ];
 
   environment.systemPackages = with pkgs; [
     vulkan-tools

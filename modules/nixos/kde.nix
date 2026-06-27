@@ -10,6 +10,7 @@
     kdePackages.sddm-kcm
     kdePackages.kolourpaint
     kdePackages.kdenlive
+    kdePackages.partitionmanager
   ];
 
 }

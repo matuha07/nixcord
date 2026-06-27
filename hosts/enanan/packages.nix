@@ -20,6 +20,8 @@
 
     krita
 
+    smartmontools
+
     localsend
     winetricks
     protontricks

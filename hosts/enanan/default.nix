@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   imports = [
     ../../modules/common
@@ -7,6 +7,7 @@
     ./fonts.nix
     ./video.nix
     ./packages.nix
+    ./kernel.nix
   ];
 
   networking.hostName = "enanan";
@@ -17,6 +18,7 @@
       "wheel"
       "networkmanager"
       "libvirtd"
+      "adbusers"
     ];
     home = "/home/motya";
   };

@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # 99.99% are from https://github.com/RGBCube/ncc/blob/dentride/modules/linux-kernel.mod.nix
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
 
   boot.kernel.sysctl = {
     "kernel.sysrq" = 0;

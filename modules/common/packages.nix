@@ -11,7 +11,6 @@
     tmux
     wget
     vim
-    (if pkgs.stdenv.isDarwin then pkgs.ghostty-bin else pkgs.ghostty)
     git
     jujutsu
     yazi

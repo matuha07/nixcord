@@ -16,21 +16,13 @@
     proton-vpn
 
     libreoffice-fresh
-    onlyoffice-desktopeditors
 
     krita
-
-    smartmontools
 
     localsend
     winetricks
     protontricks
     lutris
-
-    pgadmin4
-
-    xrdp
-    xsettingsd
   ];
 
   programs.virt-manager.enable = true;

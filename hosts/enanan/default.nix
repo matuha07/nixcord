@@ -8,6 +8,8 @@
     ./video.nix
     ./packages.nix
     ./kernel.nix
+    ./network.nix
+    ./kde.nix
   ];
 
   networking.hostName = "enanan";

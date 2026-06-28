@@ -6,7 +6,6 @@
     ./nushell.nix
     ./fastfetch.nix
     ./zoxide.nix
-    ./ghostty.nix
   ];
 
   home.username = "motya";

@@ -25,11 +25,8 @@
     deno
     pnpm
     nodejs
-    go
     gcc
     gh
-    cargo
-    rustc
     opencode
   ];
 }

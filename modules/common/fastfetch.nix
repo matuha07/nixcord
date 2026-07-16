@@ -11,6 +11,7 @@
         "os"
         "cpu"
         "gpu"
+        "memory"
         "kernel"
         "uptime"
         "packages"

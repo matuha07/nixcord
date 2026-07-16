@@ -9,5 +9,11 @@
     pulse.enable = true;
   };
 
+  zramSwap = {
+    enable = true;
+    memoryPercent = 50;
+    algorithm = "zstd";
+  };
+
   hardware.bluetooth.enable = true;
 }

@@ -6,4 +6,6 @@
     "quiet"
     "splash"
   ];
+
+  boot.plymouth.enable = true;
 }

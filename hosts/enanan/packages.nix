@@ -3,9 +3,10 @@
 
   environment.systemPackages = with pkgs; [
     telegram-desktop
-    ghostty
+    vesktop
+    kitty
     qbittorrent
-    wine
+    wine64
     zed-editor
     vlc
     cargo
@@ -14,6 +15,8 @@
     obs-studio
     nicotine-plus
     proton-vpn
+
+    protonup-qt
 
     libreoffice-fresh
 
@@ -27,4 +30,6 @@
 
   programs.virt-manager.enable = true;
   programs.firefox.enable = true;
+  programs.steam.enable = true;
+  services.flatpak.enable = true;
 }

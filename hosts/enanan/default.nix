@@ -10,6 +10,7 @@
     ./kernel.nix
     ./network.nix
     ./kde.nix
+    ./hardware.nix
   ];
 
   networking.hostName = "enanan";
@@ -20,12 +21,8 @@
       "wheel"
       "networkmanager"
       "libvirtd"
-      "adbusers"
+      "docker"
     ];
     home = "/home/motya";
   };
-
-  programs.steam.enable = true;
-  services.flatpak.enable = true;
-  nixpkgs.config.allowUnfree = true;
 }

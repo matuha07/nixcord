@@ -2,10 +2,8 @@
 {
   services.pipewire = {
     enable = true;
-
     alsa.enable = true;
     alsa.support32Bit = true;
-
     pulse.enable = true;
   };
 
@@ -13,7 +11,12 @@
     enable = true;
     memoryPercent = 50;
     algorithm = "zstd";
+    priority = 100;
   };
+
+  systemd.oomd.enable = true;
+
+  services.fwupd.enable = true;
 
   hardware.bluetooth.enable = true;
 }

@@ -4,28 +4,26 @@
   environment.systemPackages = with pkgs; [
     telegram-desktop
     vesktop
-    kitty
-    qbittorrent
-    wine64
+
     zed-editor
-    vlc
-    cargo
-    rustc
-    godot
-    obs-studio
-    nicotine-plus
+    kitty
+    rustup
+
     proton-vpn
 
-    protonup-qt
-
     libreoffice-fresh
-
     krita
-
+    vlc
+    nicotine-plus
+    qbittorrent
+    obs-studio
     localsend
+
+    wine64
     winetricks
     protontricks
     lutris
+    protonup-qt
   ];
 
   programs.virt-manager.enable = true;

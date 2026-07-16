@@ -22,11 +22,9 @@
     nushell
 
     # code
-    deno
+    gcc
     pnpm
     nodejs
-    gcc
     gh
-    opencode
   ];
 }

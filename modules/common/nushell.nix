@@ -6,7 +6,6 @@
       configFile.source = ./config.nu;
       shellAliases = {
         vi = "nvim";
-        vim = "nvim";
         nano = "nvim";
       };
     };

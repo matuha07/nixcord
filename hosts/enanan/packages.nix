@@ -11,7 +11,7 @@
 
     proton-vpn
 
-    libreoffice-fresh
+    libreoffice-stable
     krita
     mpv
     nicotine-plus

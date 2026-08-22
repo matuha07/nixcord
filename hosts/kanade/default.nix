@@ -18,6 +18,5 @@
     home = "/home/motya";
   };
 
-  nixpkgs.config.allowUnfree = true;
   hardware.enableRedistributableFirmware = true;
 }

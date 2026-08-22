@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../../modules/common
@@ -23,6 +23,9 @@
       "libvirtd"
       "docker"
     ];
+
+    shell = pkgs.nushell;
+
     home = "/home/motya";
   };
 }

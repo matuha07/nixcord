@@ -13,7 +13,7 @@
 
     libreoffice-fresh
     krita
-    vlc
+    mpv
     nicotine-plus
     qbittorrent
     obs-studio

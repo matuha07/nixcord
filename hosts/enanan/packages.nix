@@ -1,9 +1,10 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
 
   environment.systemPackages = with pkgs; [
     telegram-desktop
     vesktop
+    inputs.helium.packages.x86_64-linux.default
 
     zed-editor
     kitty

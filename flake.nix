@@ -9,10 +9,10 @@
     helium.url = "github:amaanq/helium-flake";
     helium.inputs.nixpkgs.follows = "nixpkgs";
 
-    # home-manager
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    agenix.url = "github:ryantm/agenix";
   };
   outputs =
     {
@@ -21,8 +21,9 @@
       nixpkgs,
       home-manager,
       helium,
+      agenix,
       ...
-    }:
+    }@ inputs:
     {
       darwinConfigurations."amia" = nix-darwin.lib.darwinSystem {
         modules = [
@@ -38,26 +39,25 @@
 
       nixosConfigurations."enanan" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/enanan
           home-manager.nixosModules.home-manager
-          {
-            environment.systemPackages = [
-              helium.packages.x86_64-linux.default
-            ];
-          }
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.motya = import ./modules/common/home-manager.nix;
           }
+          agenix.nixosModules.default
         ];
       };
 
       nixosConfigurations."kanade" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/kanade
+          agenix.nixosModules.default
         ];
       };
     };

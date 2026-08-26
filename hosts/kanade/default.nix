@@ -5,6 +5,7 @@
     ../../modules/nixos
     ./hardware-configuration.nix
     ./ssh.nix
+    ./immich.nix
   ];
 
   networking.hostName = "kanade";

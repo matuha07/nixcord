@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   services.caddy = {
     enable = true;
@@ -6,4 +6,6 @@
       reverse_proxy http://127.0.0.1:2386
     ";
   };
+
+  systemd.services.caddy.serviceConfig.User = lib.mkForce "root";
 }

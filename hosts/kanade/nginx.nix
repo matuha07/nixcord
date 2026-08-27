@@ -2,7 +2,7 @@
 {
   services.nginx = {
     enable = true;
-
+    clientMaxBodySize = "50000M";
     virtualHosts."immich.kanade.local" = {
       locations."/" = {
         proxyPass = "http://127.0.0.1:2386";

@@ -7,6 +7,7 @@
     ./ssh.nix
     ./immich.nix
     ./nginx.nix
+    ./firewall.nix
   ];
 
   networking.hostName = "kanade";

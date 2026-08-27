@@ -6,7 +6,7 @@
     ./hardware-configuration.nix
     ./ssh.nix
     ./immich.nix
-    ./nginx.nix
+    ./caddy.nix
     ./firewall.nix
   ];
 

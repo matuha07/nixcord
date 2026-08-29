@@ -6,7 +6,7 @@
     port = 2386;
     mediaLocation = "/home/media/immich";
     openFirewall = true;
-
+    machine-learning.enable = false;
   };
 
   systemd.services.immich-server.serviceConfig = {

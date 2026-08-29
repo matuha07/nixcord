@@ -5,15 +5,16 @@
   services.caddy = {
     package = pkgs.caddy.withPlugins {
       plugins = [ "github.com/caddy-dns/cloudflare@v0.2.4" ];
-      hash = "sha256-a875256c4a171d14cba5d8f727a9ad14ad42621997ce25565a9bc162d6cd8dfa";
+      hash = "sha256-7GoH8YLCoPmPExQxoga2FHB58zQDoZVf1BBwkVi0SsQ=";
     };
     enable = true;
     environmentFile = config.age.secrets.cloudflare-token.path;
 
+    globalConfig = ''
+          acme_dns cloudflare {env.CF_API_TOKEN}
+        '';
+
     virtualHosts."immich.dogshit.engineer".extraConfig = ''
-      tls {
-        dns cloudflare {env.CF_API_TOKEN}
-      }
       reverse_proxy http://127.0.0.1:2386
     '';
   };

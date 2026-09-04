@@ -17,5 +17,9 @@
     virtualHosts."immich.dogshit.engineer".extraConfig = ''
       reverse_proxy http://127.0.0.1:2386
     '';
+
+    virtualHosts."qbit.dogshit.engineer".extraConfig = ''
+      reverse_proxy http://127.0.0.1:8080
+    '';
   };
 }

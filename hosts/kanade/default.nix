@@ -10,7 +10,7 @@
     ./firewall.nix
     ./qbittorrent.nix
     ./navidrome.nix
-    ./radarr.nix
+    ./lidarr.nix
   ];
 
   networking.hostName = "kanade";

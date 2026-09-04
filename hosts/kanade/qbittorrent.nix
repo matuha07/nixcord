@@ -7,7 +7,7 @@
     group = "media";
   };
 
-  systemd.services.lidarr.serviceConfig = {
+  systemd.services.qbittorrent.serviceConfig = {
     ProtectHome = lib.mkForce "tmpfs";
     BindPaths = [ "/home/media" ];
   };

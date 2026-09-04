@@ -1,4 +1,4 @@
-{...}:
+{ lib, ...}:
 {
   services.navidrome = {
     enable = true;
@@ -7,5 +7,8 @@
     group = "media";
   };
 
-  systemd.services.navidrome.serviceConfig.ReadWritePaths = [ "/home/media" ];
+  systemd.services.navidrome.serviceConfig = {
+    ProtectHome = lib.mkForce "tmpfs";
+    ReadWritePaths = [ "/home/media" ];
+  };
 }

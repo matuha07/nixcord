@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   services.qbittorrent = {
     enable = true;
     openFirewall = true;
@@ -7,5 +7,8 @@
     group = "media";
   };
 
-  systemd.services.lidarr.serviceConfig.ReadWritePaths = [ "/home/media" ];
+  systemd.services.lidarr.serviceConfig = {
+    ProtectHome = lib.mkForce "tmpfs";
+    ReadWritePaths = [ "/home/media" ];
+  };
 }

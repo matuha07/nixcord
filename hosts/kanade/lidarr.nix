@@ -1,4 +1,4 @@
-{...}:
+{lib, ...}:
 {
   services.lidarr = {
     enable = true;
@@ -8,5 +8,8 @@
     dataDir = "/home/media/lidarr";
   };
 
-  systemd.services.lidarr.serviceConfig.ReadWritePaths = [ "/home/media" ];
+  systemd.services.lidarr.serviceConfig = {
+    ProtectHome = lib.mkForce "tmpfs";
+    ReadWritePaths = [ "/home/media" ];
+  };
 }

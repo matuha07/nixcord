@@ -21,5 +21,14 @@
     virtualHosts."qbit.dogshit.engineer".extraConfig = ''
       reverse_proxy http://127.0.0.1:8080
     '';
+
+    virtualHosts."lidarr.dogshit.engineer".extraConfig = ''
+      reverse_proxy http://127.0.0.1:8686
+    '';
+
+    virtualHosts."navidrome.dogshit.engineer".extraConfig = ''
+      reverse_proxy http://127.0.0.1:4533
+    '';
+
   };
 }

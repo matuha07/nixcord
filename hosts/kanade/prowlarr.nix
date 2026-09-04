@@ -8,10 +8,7 @@
 
   users.users.prowlarr = {
     isSystemUser = true;
-
-    group = [
-      "media"
-    ];
+    group = "media";
   };
 
   systemd.services.prowlarr.serviceConfig = {

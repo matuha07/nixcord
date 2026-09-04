@@ -12,6 +12,7 @@
     ./navidrome.nix
     ./lidarr.nix
     ./prowlarr.nix
+    ./flaresolverr.nix
   ];
 
   networking.hostName = "kanade";

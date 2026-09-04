@@ -17,6 +17,7 @@
     extraGroups = [
       "wheel"
       "networkmanager"
+      "podman"
     ];
     home = "/home/motya";
   };

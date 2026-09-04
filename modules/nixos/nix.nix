@@ -9,6 +9,7 @@
 
   nix.gc = {
     automatic = true;
+    persistent = false;
     options = "--delete-older-than 3d";
   };
 

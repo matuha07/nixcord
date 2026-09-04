@@ -21,7 +21,7 @@
       "wheel"
       "networkmanager"
       "libvirtd"
-      "docker"
+      "podman"
     ];
 
     shell = pkgs.nushell;

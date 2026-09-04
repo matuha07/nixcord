@@ -3,12 +3,13 @@
   services.prowlarr = {
     enable = true;
     openFirewall = true;
-    user = "prowlarr";
     dataDir = "/home/media/prowlarr";
   };
 
   users.users.prowlarr = {
-    extraGroups = [
+    isSystemUser = true;
+
+    group = [
       "media"
     ];
   };

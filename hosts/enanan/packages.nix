@@ -18,11 +18,8 @@
     nicotine-plus
     qbittorrent
     obs-studio
-    localsend
 
     wine64
-    winetricks
-    protontricks
     lutris
     protonup-qt
   ];
@@ -31,4 +28,8 @@
   programs.firefox.enable = true;
   programs.steam.enable = true;
   services.flatpak.enable = true;
+  programs.localsend = {
+    openFirewall = true;
+    enable = true;
+  };
 }

@@ -9,6 +9,13 @@
     machine-learning.enable = false;
   };
 
+  users.users.immich = {
+    extraGroups = [
+      "media"
+    ];
+  };
+
+
   systemd.services.immich-server.serviceConfig = {
     ProtectHome = lib.mkForce "tmpfs";
     BindPaths = [ "/home/media" ];

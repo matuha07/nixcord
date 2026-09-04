@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../../modules/common
@@ -8,6 +8,9 @@
     ./immich.nix
     ./caddy.nix
     ./firewall.nix
+    ./qbittorrent.nix
+    ./navidrome.nix
+    ./radarr.nix
   ];
 
   networking.hostName = "kanade";
@@ -18,9 +21,17 @@
       "wheel"
       "networkmanager"
       "podman"
+      "media"
     ];
     home = "/home/motya";
   };
+
+  users.groups.media = {};
+
+  services.cloudflare-warp.enable = true;
+  environment.systemPackages = [
+       pkgs.cloudflare-warp
+  ];
 
   hardware.enableRedistributableFirmware = true;
 }

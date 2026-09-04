@@ -9,6 +9,6 @@
 
   systemd.services.navidrome.serviceConfig = {
     ProtectHome = lib.mkForce "tmpfs";
-    ReadWritePaths = [ "/home/media" ];
+    BindPaths = [ "/home/media" ];
   };
 }

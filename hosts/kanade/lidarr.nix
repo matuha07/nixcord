@@ -10,6 +10,6 @@
 
   systemd.services.lidarr.serviceConfig = {
     ProtectHome = lib.mkForce "tmpfs";
-    ReadWritePaths = [ "/home/media" ];
+    BindPaths = [ "/home/media" ];
   };
 }

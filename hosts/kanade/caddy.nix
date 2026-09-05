@@ -30,5 +30,13 @@
       reverse_proxy http://127.0.0.1:4533
     '';
 
+    virtualHosts."slskd.dogshit.engineer".extraConfig = ''
+      reverse_proxy http://127.0.0.1:5030
+    '';
+
+    virtualHosts."prowlarr.dogshit.engineer".extraConfig = ''
+      reverse_proxy http://127.0.0.1:9696
+    '';
+
   };
 }

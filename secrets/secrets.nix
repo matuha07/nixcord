@@ -8,9 +8,10 @@ let
   systems = [system];
 in
 {
-  "secret1.age".publicKeys = [ motyaEnanan system];
+  "secret1.age".publicKeys = [ motyaEnanan system ];
+  "slskd.age".publicKeys = [ motyaEnanan system ];
   "armored-secret.age" = {
-    publicKeys = [motyaEnanan];
+    publicKeys = [ users ];
     armor = true;
   };
 }

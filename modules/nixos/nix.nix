@@ -13,6 +13,8 @@
     options = "--delete-older-than 3d";
   };
 
+  programs.nix-ld.enable = true;
+
   nixpkgs.config.allowUnfree = true;
 
 }

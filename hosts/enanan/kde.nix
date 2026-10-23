@@ -1,8 +1,7 @@
 { pkgs, ... }:
 {
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.plasma-login-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
     kdePackages.kcalc
@@ -13,5 +12,12 @@
     kdePackages.kdenlive
     kdePackages.partitionmanager
   ];
+
+  environment.plasma6.excludePackages = [
+    pkgs.kdePackages.elisa
+    pkgs.kdePackages.plasma-browser-integration
+  ];
+
+  programs.kde-pim.enable = false;
 
 }

@@ -8,6 +8,9 @@
     user = "slskd";
     group = "media";
     environmentFile = config.age.secrets.slskd-env.path;
+    settings = {
+      shares.directories = [ "/home/media/music" ];
+    };
   };
 
   systemd.services.slskd.serviceConfig = {

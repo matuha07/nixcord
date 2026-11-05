@@ -4,6 +4,7 @@
     enable = true;
     openFirewall = true;
     settings.MusicFolder = "/home/media/music";
+	  settings.Address = "0.0.0.0";
     group = "media";
   };
 

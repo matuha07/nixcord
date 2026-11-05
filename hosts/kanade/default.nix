@@ -15,6 +15,7 @@
     ./prowlarr.nix
     ./flaresolverr.nix
     ./slskd.nix
+    ./monitoring
   ];
 
   networking.hostName = "kanade";

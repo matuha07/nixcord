@@ -13,6 +13,17 @@
     pkgs.nixfmt
   ];
 
+  programs.nh = {
+    enable = true;
+
+    clean = {
+        enable = true;
+        dates = "weekly";
+        extraArgs = "--keep 5 --keep-since 14d";
+    };
+    flake = "/home/motya/nixcord";
+  };
+
   nix.settings = {
     trusted-users = [ "root" "motya" ];
 

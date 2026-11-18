@@ -22,6 +22,10 @@
     wine64
     lutris
     protonup-qt
+
+    file
+    pciutils
+    usbutils
   ];
 
   programs.virt-manager.enable = true;

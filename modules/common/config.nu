@@ -1,5 +1,5 @@
-let carapace_completer = {|spans|
-carapace $spans.0 nushell ...$spans | from json
+let carapace_completer = {|place|
+    carapace $place.command.0 nushell ...$place.command | from json
 }
 $env.config = {
  show_banner: false,
@@ -16,8 +16,3 @@ $env.config = {
    }
  }
 }
-$env.PATH = ($env.PATH |
-split row (char esep) |
-prepend /home/myuser/.apps |
-append /usr/bin/env
-)

@@ -1,4 +1,3 @@
-{ ... }:
 {
   programs.zoxide = {
     enable = true;
@@ -8,6 +7,5 @@
       "cd"
     ];
     enableNushellIntegration = true;
-
   };
 }

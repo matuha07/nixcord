@@ -11,7 +11,7 @@
     group = "media";
   };
 
-  systemd.services.lidarr.serviceConfig = {
+  systemd.services.prowlarr.serviceConfig = {
     ProtectHome = lib.mkForce "tmpfs";
     BindPaths = [ "/home/media" ];
   };

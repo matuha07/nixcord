@@ -11,6 +11,7 @@
     kdePackages.kolourpaint
     kdePackages.kdenlive
     kdePackages.partitionmanager
+    kdePackages.kdeconnect-kde
   ];
 
   environment.plasma6.excludePackages = [

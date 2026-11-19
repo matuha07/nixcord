@@ -3,7 +3,6 @@
   imports = [
     ../../modules/common
     ../../modules/nixos
-    ./boot.nix
     ./hardware-configuration.nix
     ./ssh.nix
     ./immich.nix

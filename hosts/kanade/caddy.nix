@@ -1,14 +1,8 @@
 { lib, pkgs, config, ... }:
 {
-  age.secrets.cloudflare-token.file = ../../secrets/secret1.age;
 
   services.caddy = {
-    package = pkgs.caddy.withPlugins {
-      plugins = [ "github.com/caddy-dns/cloudflare@v0.2.4" ];
-      hash = "sha256-tubXIDCJnO2mvdnPlZclwDhNGaeeYLSt7lnni3+pXDo=";
-    };
-    enable = true;
-    environmentFile = config.age.secrets.cloudflare-token.path;
+    enable = false;
 
     globalConfig = ''
           acme_dns cloudflare {env.CF_API_TOKEN}

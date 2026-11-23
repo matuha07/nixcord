@@ -1,13 +1,11 @@
 { lib, config, ...}:
 {
-  age.secrets.slskd-env.file = ../../secrets/slskd.age;
-
   services.slskd = {
     enable = true;
     openFirewall = true;
     user = "slskd";
     group = "media";
-    environmentFile = config.age.secrets.slskd-env.path;
+    environmentFile = config.age.secrets.slskd.path;
     settings = {
       shares.directories = [ "/home/media/music" ];
     };

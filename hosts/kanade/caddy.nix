@@ -1,35 +1,49 @@
-{ lib, pkgs, config, ... }:
+{ pkgs, config, ... }:
 {
 
   services.caddy = {
-    enable = false;
+    enable = true;
+
+    package = pkgs.caddy.withPlugins {
+      plugins = ["github.com/empressmarissa/caddy-dns-spaceship@v1.2.0"];
+      hash = "sha256-n2VvdSXuvC7QMdSEaQfGGaBMDNzCYAjXB+WIzfnMbts=";
+    };
+
+    environmentFile = config.age.secrets.spaceship-env.path;
 
     globalConfig = ''
-          acme_dns cloudflare {env.CF_API_TOKEN}
+          acme_dns spaceship {
+          api_key {$LIBDNS_SPACESHIP_APIKEY}
+          api_secret {$LIBDNS_SPACESHIP_APISECRET}
+          }
         '';
 
-    virtualHosts."immich.dogshit.engineer".extraConfig = ''
+    virtualHosts."immich.coughing.baby".extraConfig = ''
       reverse_proxy http://127.0.0.1:2386
     '';
 
-    virtualHosts."qbit.dogshit.engineer".extraConfig = ''
+    virtualHosts."qbit.coughing.baby".extraConfig = ''
       reverse_proxy http://127.0.0.1:8080
     '';
 
-    virtualHosts."lidarr.dogshit.engineer".extraConfig = ''
+    virtualHosts."lidarr.coughing.baby".extraConfig = ''
       reverse_proxy http://127.0.0.1:8686
     '';
 
-    virtualHosts."navidrome.dogshit.engineer".extraConfig = ''
+    virtualHosts."navidrome.coughing.baby".extraConfig = ''
       reverse_proxy http://127.0.0.1:4533
     '';
 
-    virtualHosts."slskd.dogshit.engineer".extraConfig = ''
+    virtualHosts."slskd.coughing.baby".extraConfig = ''
       reverse_proxy http://127.0.0.1:5030
     '';
 
-    virtualHosts."prowlarr.dogshit.engineer".extraConfig = ''
+    virtualHosts."prowlarr.coughing.baby".extraConfig = ''
       reverse_proxy http://127.0.0.1:9696
+    '';
+
+    virtualHosts."grafana.coughing.baby".extraConfig = ''
+      reverse_proxy http://127.0.0.1:3000
     '';
 
   };

@@ -10,6 +10,6 @@
 
   systemd.services.navidrome.serviceConfig = {
     ProtectHome = lib.mkForce "tmpfs";
-    BindPaths = [ "/home/media" ];
+    BindPaths = [ "/home/media" "/home/motya/music-sorted" ];
   };
 }

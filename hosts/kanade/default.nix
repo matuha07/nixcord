@@ -3,6 +3,7 @@
   imports = [
     ../../modules/common
     ../../modules/nixos
+    ../../secrets/agenix-module.nix
     ./hardware-configuration.nix
     ./ssh.nix
     ./immich.nix

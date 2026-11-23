@@ -13,6 +13,9 @@
     ./hardware.nix
   ];
 
+  boot.kernelParams = [
+    "usb-storage.quirks=0951:176b:u"
+  ];
   networking.hostName = "enanan";
 
   users.users.motya = {
